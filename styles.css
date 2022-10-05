@@ -1,0 +1,228 @@
+/* Photo credits:
+Tea: Photo by <a href="https://unsplash.com/@kekse_und_ich?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Svitlana</a> on <a href="https://unsplash.com/s/photos/tea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+*/
+
+/*next up:
+-passwords match?
+-custom validation messages
+-password pattern matching
+-phone number mask
+-mobile functionality
+-for firefox, only show invalid after user clicks (:user-invalid)
+*/
+
+:root{
+  --background-color: #FDE5DB;
+  --text-color: #BB6C31;
+  --shadow-color:#C7B5B3;
+  --highlight-color:#FFAF59;
+  --contrast-color: #A93327;
+  --accent-color: #895056 ;
+  --right-width:58vw;
+}
+
+@font-face {
+  font-family: Abyssinica;
+  src: url(Fonts/AbyssinicaSIL-Regular.ttf);
+}
+
+body{
+  /* display:flex;
+  flex:none;
+  flex-direction:column;*/
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:row;
+  min-height:100vh;
+  font-family: Garamond, serif;
+}
+
+.left-side{
+  display:flex;
+  width:40vw;
+  background-image:url("Photos/background-tea.jpg");
+  background-repeat: no-repeat;
+  background-color:var(--contrast-color);
+  height:100vh;
+  flex:none;
+  flex-direction:column;
+  background-size:cover;
+}
+
+.right-side{
+  display:flex;
+  flex:none;
+  flex-direction:column;
+  /* width:60vw; */
+  width:var(--right-width);
+  background-color:var(--background-color);
+  height:100vh;
+}
+
+.banner{
+  display:flex;
+  flex:none;
+  flex-direction:column;
+  width:40vw;
+  background-color:var(--contrast-color);
+  height:20vh;
+  opacity:0.5;
+  position:relative;
+  top:8vh;
+  justify-content:center;
+  align-items:center;
+  font-family:Abyssinica;
+  font-weight:bolder;
+  font-size: 6vh;
+  /* color: var(--background-color) */
+  color:rgba(253, 229, 219, 1);
+}
+
+.background-block{
+display:flex;
+flex:auto;
+flex-direction:column;
+background-color:var(--shadow-color);
+color:var(--accent-color);
+justify-content:space-around;
+/* padding: 2em; */
+padding-left:2em;
+opacity:0.8;
+padding-right:20vw;
+}
+
+.background-block .bottom-text{
+  display:flex;
+  flex-direction:row;
+  flex:auto;
+  padding-top:1em;
+  padding-right:0vw;
+  padding-left:10vw;
+  align-self:center;
+}
+
+.logo{
+  display:flex;
+  flex:none;
+  width:4vw;
+  padding-bottom:2px;
+}
+
+.form-block{
+display:flex;
+flex:auto;
+flex-direction:column;
+background-color:var(--background-color);
+color:var(--text-color);
+padding-left:2vw;
+box-shadow: 0px 5px var(--accent-color);
+}
+
+.form-row{
+  display:flex;
+  flex:none;
+  flex-direction:row;
+  justify-content:flex-start;
+  padding-top:2em;
+  /* width:var(--right-width); */
+  width:58vw;
+  padding-left:2em;
+}
+
+.form-question{
+  display:flex;
+  flex:none;
+  flex-direction:row;
+  justify-content:flex-start;
+  /* width:var(--right-width)/2; */
+  width:22vw;
+}
+
+.bottom-text a{
+  color:var(--contrast-color);
+  font-weight:bold; 
+  padding-left:0.3em;
+}
+
+.credit{
+  color:white;
+  position:fixed;
+  bottom:0;
+  left:0;
+}
+
+.credit a{
+  color:white;
+}
+
+h1{
+  font-family:Abyssinica;
+}
+
+button{
+  background-color:var(--accent-color);
+  border: solid 2px var(--contrast-color);
+  color:var(--highlight-color);
+  font-weight:bolder;
+  width:12vw;
+  height:2em;
+  border-radius:20px; 
+  margin-left:1em;
+  position:relative;
+  left:15vw;
+}
+
+button:hover{
+  background-color:var(--text-color);
+  cursor:pointer;
+}
+
+button:active{
+  background-color:var(--contrast-color);
+  cursor:pointer;
+}
+
+label{
+  padding-left:1vw;
+  padding-right:1vw;
+  width:12vw;
+  justify-self:flex-start;
+  display:flex;
+  flex:none;
+}
+
+input[type="text"],input[type="email"],input[type="tel"],input[type="password"]{
+  display:flex;
+  flex:none;
+  width:12vw;
+  height:1.5em;
+  /* padding-right:2em; */
+  border-radius:10px;
+  border:none;
+  justify-self:flex-end;
+  position:relative;
+  left:-2vw;
+}
+
+input[type="text"].left-input,input[type="email"].left-input,input[type="password"].left-input{
+  position:relative;
+  left:-6vw;
+}
+
+input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus,input[type="password"]:focus{
+  outline: 1px solid var(--highlight-color);
+  box-shadow: 0px 2px var(--accent-color);
+}
+
+input[type="email"]:invalid{
+  border:solid 2px red;
+}
+
+input[type="tel"]:invalid{
+  border: solid 2px red;
+}
+
+input[type="password"]:invalid{
+  border:solid 2px red;
+}

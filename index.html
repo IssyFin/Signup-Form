@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lantern Teahouse Mailing List</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="icon" href="Icons/coffee.svg"/>
+  </head>
+  <body>
+    <span class="left-side">
+      <span class="banner">
+        <span><img class="logo" src="Icons/coffeering.png" alt="Teahouse logo"></span>
+        <span>Lantern Teahouse</span>
+      </span>
+      <span class="credit">
+      Photo by <a href="https://unsplash.com/@kekse_und_ich?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Svitlana</a> on <a href="https://unsplash.com/s/photos/tea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      </span>
+    </span>
+    <span class="right-side">
+      <span class="background-block">
+        <span>This is not a real teahouse.</span>
+        <span>Beyond our classic favorites, we frequently introduce seasonal picks. Make an account
+          to stay informed on all our new offerings. </span>
+      </span>
+      <span class="form-block">
+        <h1>Make an Account:</h1>
+        <form action="" method="post">
+          Required fields are marked with a *
+          <span class="form-row">
+            <span class="form-question">
+              <label for="first-name">First Name:<span aria-label="Required"><strong>*</strong></span></label>
+              <input type="text" id="first-name" placeholder="Amelia" class="left-input" required>
+            </span>
+            <span class="form-question">
+              <label for="last-name">Last Name:<span aria-label="Required"><strong>*</strong></span></label>
+              <input type="text" id="last-name" placeholder="Earhart"/ required>
+            </span>
+          </span>
+          <span class="form-row">
+            <span class="form-question">
+              <label for="email">Email:<span aria-label="Required" required><strong>*</strong></span></label>
+              <input type="email" id="email" placeholder="love2fly@aol.com" class="left-input" />
+            </span>
+            <span class="form-question">
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" placeholder="123-456-7890" pattern="\d{3}-\d{3}-\d{4}"/>
+            </span>
+          </span>
+          <span class="form-row">
+            <span class="form-question">
+            <label for="pwd">Password:<span aria-label="Required"><strong>*</strong></span></label>
+            <input type="password" id="pwd" placeholder="......" class="left-input" required minlength=6/>
+            </span>
+            <span class="form-question">
+            <label for="confirm-pwd">Confirm Password:<span aria-label="Required"><strong>*</strong></span></label>
+            <input type="password" id="confirm-pwd" placeholder="......" required minlength=6 />
+            </span>
+          </span>
+          <span class="form-row"><button type="submit">Create Account</button></span>
+        </form>
+      </span>
+      <span class="background-block">
+        <span class="bottom-text">Already have an account? <a href="index.html"> Log in.</a></span>
+      </span>
+    </span>
+  </body>
+</html>
