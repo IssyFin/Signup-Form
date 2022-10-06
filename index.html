@@ -5,6 +5,7 @@
     <title>Lantern Teahouse Mailing List</title>
     <link rel="stylesheet" href="styles.css"/>
     <link rel="icon" href="Icons/coffee.svg"/>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <span class="left-side">
@@ -24,39 +25,40 @@
       </span>
       <span class="form-block">
         <h1>Make an Account:</h1>
-        <form action="" method="post">
+        <!-- <form action="" method="post" onSubmit="return checkPassword(this)"> -->
+          <form action="" method="post" id="signupForm">
           Required fields are marked with a *
           <span class="form-row">
             <span class="form-question">
               <label for="first-name">First Name:<span aria-label="Required"><strong>*</strong></span></label>
-              <input type="text" id="first-name" placeholder="Amelia" class="left-input" required>
+              <input type="text" name="first-name" id="first-name" placeholder="Diane" class="left-input" required>
             </span>
             <span class="form-question">
               <label for="last-name">Last Name:<span aria-label="Required"><strong>*</strong></span></label>
-              <input type="text" id="last-name" placeholder="Earhart"/ required>
+              <input type="text" name="last-name" id="last-name" placeholder="Nguyen"/ required>
             </span>
           </span>
           <span class="form-row">
             <span class="form-question">
               <label for="email">Email:<span aria-label="Required" required><strong>*</strong></span></label>
-              <input type="email" id="email" placeholder="love2fly@aol.com" class="left-input" />
+              <input type="email" name="email" id="email" placeholder="diane-80@aol.com" class="left-input" />
             </span>
             <span class="form-question">
               <label for="phone">Phone Number:</label>
-              <input type="tel" id="phone" placeholder="123-456-7890" pattern="\d{3}-\d{3}-\d{4}"/>
+              <input type="tel" name="phone" id="phone" placeholder="123-456-7890" pattern="\d{3}-\d{3}-\d{4}"/>
             </span>
           </span>
           <span class="form-row">
             <span class="form-question">
             <label for="pwd">Password:<span aria-label="Required"><strong>*</strong></span></label>
-            <input type="password" id="pwd" placeholder="......" class="left-input" required minlength=6/>
+            <input type="password" name="pwd" id="pwd" placeholder="......" class="left-input pwd" required minlength=6/>
             </span>
             <span class="form-question">
             <label for="confirm-pwd">Confirm Password:<span aria-label="Required"><strong>*</strong></span></label>
-            <input type="password" id="confirm-pwd" placeholder="......" required minlength=6 />
+            <input type="password" name="confirm" id="confirm-pwd" placeholder="......" required minlength=6 onfocusout="return checkPassword(signupForm)" />
             </span>
           </span>
-          <span class="form-row"><button type="submit">Create Account</button></span>
+          <span class="form-row"><button type="submit" onClick="return checkPassword(signupForm)">Create Account</button></span>
         </form>
       </span>
       <span class="background-block">

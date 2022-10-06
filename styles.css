@@ -3,8 +3,8 @@ Tea: Photo by <a href="https://unsplash.com/@kekse_und_ich?utm_source=unsplash&u
 */
 
 /*next up:
--passwords match?
--custom validation messages
+-custom validation messages (especially for password match)
+-visible (no tooltip) validation messages
 -password pattern matching
 -phone number mask
 -mobile functionality
@@ -90,6 +90,7 @@ justify-content:space-around;
 padding-left:2em;
 opacity:0.8;
 padding-right:20vw;
+font-size:2.5vh;
 }
 
 .background-block .bottom-text{
@@ -150,6 +151,7 @@ box-shadow: 0px 5px var(--accent-color);
   position:fixed;
   bottom:0;
   left:0;
+  font-size:0.5vh;
 }
 
 .credit a{
@@ -158,6 +160,7 @@ box-shadow: 0px 5px var(--accent-color);
 
 h1{
   font-family:Abyssinica;
+  font-size:4vh;
 }
 
 button{
@@ -166,11 +169,13 @@ button{
   color:var(--highlight-color);
   font-weight:bolder;
   width:12vw;
-  height:2em;
+  /* height:2em; */
   border-radius:20px; 
   margin-left:1em;
   position:relative;
   left:15vw;
+  font-size:2.5vh;
+  height:4vh;
 }
 
 button:hover{
@@ -185,18 +190,23 @@ button:active{
 
 label{
   padding-left:1vw;
-  padding-right:1vw;
+  padding-right:2vw;
   width:12vw;
   justify-self:flex-start;
   display:flex;
   flex:none;
+  font-size:2.5vh;
+}
+
+#confirm-pwd.pass-nomatch{
+  border:solid 2px red;
 }
 
 input[type="text"],input[type="email"],input[type="tel"],input[type="password"]{
   display:flex;
   flex:none;
   width:12vw;
-  height:1.5em;
+  height:4vh;
   /* padding-right:2em; */
   border-radius:10px;
   border:none;
@@ -226,3 +236,4 @@ input[type="tel"]:invalid{
 input[type="password"]:invalid{
   border:solid 2px red;
 }
+
